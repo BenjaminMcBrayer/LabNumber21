@@ -1,12 +1,12 @@
-package com.gc.coffee.LabNumber21;
+package co.grandcircus.coffeeshopapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LabNumber21Application {
+public class CoffeeShopApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LabNumber21Application.class, args);
+		SpringApplication.run(CoffeeShopApp.class, args);
 	}
 }
