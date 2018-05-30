@@ -6,38 +6,31 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css?family=Tangerine">
+
 <link
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Tangerine">
+	
 <title>Welcome to GC Coffee!</title>
-
-<style>
-h1 {
-	color: maroon;
-	font-family: 'Tangerine', serif;
-	font-size: 48px;
-	text-shadow: 4px 4px 4px #aaa;
-	font-weight: bolder;
-}
-</style>
-
 </head>
 
 <body>
 	<div class="container">
 		<h1>Welcome to GC COFFEE!</h1>
-		<a href="/registration">Please click to register.</a> <br><br>
+		<a href="/registration">Please click to register.</a> <br>
+		<br>
 		<!-- ${registration} The expression tag, if included, will result in the appearance of the value in the third parameter of ModelAndView index (i.e., "Welcome") -->
 		<table class="table">
 			<thead>
 				<tr>
-				<th>Name</th>
-				<th>Description</th>
-				<th>Price</th>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Price</th>
 				</tr>
 			</thead>
 			<tbody>

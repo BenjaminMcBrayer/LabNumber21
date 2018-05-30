@@ -17,30 +17,30 @@ public class ObjectDao {
 	JdbcTemplate jdbcTemplate;
 
 	public List<Person> findAllUsers() {
-		String sql = "SELECT * FROM coffeeshopdb.users";
+		String sql = "SELECT * FROM users";
 		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Person.class));
 	}
 
 	public void addUser(Person person) {
-		String sql = "INSERT INTO coffeeshopdb.users (firstName, lastName, emailAddress, phoneNumber, birthDate, userGender) VALUES (?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO users (firstName, lastName, emailAddress, phoneNumber, birthDate, userGender) VALUES (?, ?, ?, ?, ?, ?)";
 		
 		jdbcTemplate.update(sql, person.getFirstName(), person.getLastName(), person.getEmailAddress(),
 				person.getPhoneNumber(), person.getBirthDate(), person.getUserGender());
 	}
 
 	public void deleteUser(long customerId) {
-		String sql = "DELETE FROM coffeeshopdb.users WHERE customerId=?";
+		String sql = "DELETE FROM users WHERE customerId=?";
 
 		jdbcTemplate.update(sql, customerId);
 	}
 
 	public List<Item> findAllItems() {
-		String sql = "SELECT * FROM coffeeshopdb.items";
+		String sql = "SELECT * FROM items";
 		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Item.class));
 	}
 
 	public void addItem(Item item) {
-		String sql = "INSERT INTO coffeeshopdb.items (name, description, quantity, price) VALUES (?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO items (name, description, quantity, price) VALUES (?, ?, ?, ?, ?)";
 		jdbcTemplate.update(sql, item.getName(), item.getDescription(), item.getQuantity(), item.getPrice());
 	}
 

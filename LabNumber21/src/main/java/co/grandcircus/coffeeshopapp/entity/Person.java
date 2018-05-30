@@ -4,23 +4,26 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
-	public enum Gender {OTHER, FEMALE, MALE}
-	
+	// public enum Gender {
+	// OTHER, FEMALE, MALE
+	// }
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long customerId;
 	private String firstName;
 	private String lastName;
 	private String emailAddress;
 	private String phoneNumber;
 	private String birthDate;
-	private Gender userGender;
+	private String userGender;
 	private String pWord;
 
 	public Person() {
 	}
 
-	public Person(Long customerId, String firstName, String lastName, String emailAddress, String phoneNumber, String birthDate, Gender userGender, String pWord) {
+	public Person(Long customerId, String firstName, String lastName, String emailAddress, String phoneNumber,
+			String birthDate, String userGender, String pWord) {
 		super();
 		this.customerId = customerId;
 		this.firstName = firstName;
@@ -31,8 +34,9 @@ public class Person implements Serializable {
 		this.userGender = userGender;
 		this.pWord = pWord;
 	}
-	
-	public Person(Long customerId, String firstName, String lastName, String emailAddress, String phoneNumber, String birthDate, Gender userGender) {
+
+	public Person(Long customerId, String firstName, String lastName, String emailAddress, String phoneNumber,
+			String birthDate, String userGender) {
 		super();
 		this.customerId = customerId;
 		this.firstName = firstName;
@@ -86,19 +90,19 @@ public class Person implements Serializable {
 	public String getBirthDate() {
 		return birthDate;
 	}
-	
+
 	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
-	
-	public Gender getUserGender() {
+
+	public String getUserGender() {
 		return userGender;
 	}
-	
-	public void setUserGender(Gender userGender) {
+
+	public void setUserGender(String userGender) {
 		this.userGender = userGender;
 	}
-	
+
 	public String getPWord() {
 		return pWord;
 	}
@@ -109,27 +113,9 @@ public class Person implements Serializable {
 
 	@Override
 	public String toString() {
-		switch(this.userGender) {
-		
-		case OTHER:
-			if (getUserGender() == Person.Gender.OTHER) {
-				return "OTHER";
-			}
-			break;
-		
-		case FEMALE:
-			if (getUserGender() == Person.Gender.FEMALE) {
-				return "FEMALE";
-			}
-			break;
-		
-		case MALE:
-			if (getUserGender() == Person.Gender.MALE) {
-				return "MALE";
-			}
-			break;
-		
-		default: break;
-		} return null;
-	} 
+		return "Person [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", emailAddress=" + emailAddress + ", phoneNumber=" + phoneNumber + ", birthDate=" + birthDate
+				+ ", userGender=" + userGender + ", pWord=" + pWord + "]";
+	}
+
 }

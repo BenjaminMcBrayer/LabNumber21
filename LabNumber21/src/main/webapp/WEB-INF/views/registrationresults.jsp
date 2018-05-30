@@ -144,7 +144,7 @@ input[type=submit] {
 <body>
 	${person}
 	<div class="container">
-		<h3>Please enter your user name (your email address) and create a password to continue.</h3>
+		<h3>Please enter your user name (email) and create a password.</h3>
 		<form action="">
 			<div class="form-group">
 				<label for="email">User Name</label> <input type="email"
