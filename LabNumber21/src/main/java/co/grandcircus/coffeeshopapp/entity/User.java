@@ -2,11 +2,7 @@ package co.grandcircus.coffeeshopapp.entity;
 
 import java.io.Serializable;
 
-public class Person implements Serializable {
-
-	// public enum Gender {
-	// OTHER, FEMALE, MALE
-	// }
+public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -19,10 +15,10 @@ public class Person implements Serializable {
 	private String userGender;
 	private String pWord;
 
-	public Person() {
+	public User() {
 	}
 
-	public Person(Long customerId, String firstName, String lastName, String emailAddress, String phoneNumber,
+	public User(Long customerId, String firstName, String lastName, String emailAddress, String phoneNumber,
 			String birthDate, String userGender, String pWord) {
 		super();
 		this.customerId = customerId;
@@ -35,7 +31,7 @@ public class Person implements Serializable {
 		this.pWord = pWord;
 	}
 
-	public Person(Long customerId, String firstName, String lastName, String emailAddress, String phoneNumber,
+	public User(Long customerId, String firstName, String lastName, String emailAddress, String phoneNumber,
 			String birthDate, String userGender) {
 		super();
 		this.customerId = customerId;
@@ -113,7 +109,7 @@ public class Person implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Person [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
+		return "User [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", emailAddress=" + emailAddress + ", phoneNumber=" + phoneNumber + ", birthDate=" + birthDate
 				+ ", userGender=" + userGender + ", pWord=" + pWord + "]";
 	}

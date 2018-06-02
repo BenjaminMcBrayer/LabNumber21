@@ -8,46 +8,6 @@ h1 {
 	font-weight: bolder;
 }
 
-h2, head, form, button {
-	font-family: 'Inconsolata', serif;
-}
-
-p {
-	font-family: 'Inconsolata', serif;
-	font-size: 10px;
-}
-
-input {
-	font-family: 'Inconsolata', serif;
+#firstname, #lastname, #email, #phonenumber, #birthdate, #register {
 	width: 50%;
-}
-
-#contact div {
-	margin-top: 1em;
-}
-
-.error {
-	display: none;
-	margin-left: 10px;
-}
-
-.error_show {
-	color: red;
-	margin-left: 10px;
-}
-
-input.invalid {
-	border: 2px solid red;
-}
-
-input.valid {
-	border: 2px solid green;
-}
-
-input[type="radio"] {
-	margin-left: -333px;
-}
-
-input[name="userGender"] {
-	margin-right: -320px;
 }
